@@ -1,0 +1,482 @@
+/* =========================================
+   RESET & VARIABLES
+   ========================================= */
+   :root {
+    --font-sans: 'Inter', sans-serif;
+    --font-serif: 'Playfair Display', serif;
+    
+    /* Cores principais */
+    --color-primary-dark: #0f4c3a; 
+    --color-primary: #1a5e30;
+    --color-bg-page: #e3e9de; 
+    --color-card-bg: #eaf3d5; 
+    --color-card-border: #809c69;
+    
+    /* Textos */
+    --color-text-dark: #111111;
+    --color-text-light: #ffffff;
+    --color-text-gray: #4a4a4a;
+    
+    /* Específicos dos cards */
+    --color-gauge-track: #d2dec0;
+    --color-gauge-fill: #4c8a2b;
+    --color-input-bg: #bbf777;
+    --color-weather-sun: #f5a623;
+    --color-weather-cloud: #7a8b99;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--color-bg-page);
+    color: var(--color-text-dark);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* =========================================
+   HERO & NAVBAR
+   ========================================= */
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 380px;
+    background-image: url('https://images.unsplash.com/photo-1599940824399-b87987ceb72a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center 70%;
+    padding: 1.5rem 4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Overlay gradient combinando com o verde da imagem original */
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(90deg, rgba(39,122,23,0.9) 0%, rgba(10,38,15,0.6) 100%);
+    z-index: 1;
+}
+
+.navbar {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.logo-icon {
+    background-color: #6bb036;
+    color: var(--color-text-dark);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
+}
+
+.logo-text {
+    color: var(--color-text-light);
+    font-size: 1.6rem;
+    font-weight: 700;
+    font-family: var(--font-serif);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: var(--font-serif);
+    transition: opacity 0.2s ease;
+    padding-bottom: 5px;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+.nav-links a.active {
+    font-weight: 600;
+    border-bottom: 2px solid var(--color-text-light);
+}
+
+.btn-entrar {
+    background-color: transparent;
+    border: 1px solid var(--color-text-light);
+    color: var(--color-text-light);
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-entrar:hover {
+    background-color: var(--color-text-light);
+    color: var(--color-primary-dark);
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-text-light);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    margin-top: auto;
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: 4rem;
+    color: var(--color-text-light);
+    margin-bottom: 0.2rem;
+    letter-spacing: 1px;
+}
+
+.hero-content p {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--color-text-light);
+    line-height: 1.2;
+}
+
+/* =========================================
+   MAIN CONTENT & CARDS
+   ========================================= */
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: -1rem; /* Aproximação da seção superior */
+}
+
+.resource-card {
+    background-color: var(--color-card-bg);
+    border: 1px solid var(--color-card-border);
+    border-radius: 12px;
+    padding: 1.8rem;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1), inset 0 2px 4px rgba(255,255,255,0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.card-icon {
+    font-size: 2.2rem;
+    color: var(--color-text-dark);
+}
+
+.card-header h2 {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+.card-description {
+    font-family: var(--font-serif);
+    font-size: 0.95rem;
+    color: var(--color-text-dark);
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+}
+
+/* --- Card 1: Weather Grid --- */
+.weather-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.2rem;
+    text-align: center;
+    margin-top: auto;
+}
+
+.weather-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.day-name {
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.weather-icon {
+    font-size: 1.1rem;
+}
+
+.weather-icon.sunny { color: var(--color-weather-sun); }
+.weather-icon.partly-cloudy { color: var(--color-weather-sun); }
+.weather-icon.cloudy { color: var(--color-weather-cloud); }
+.weather-icon.rainy { color: #5a7b9c; } /* Azul escuro/cinza */
+
+.condition {
+    font-size: 0.55rem;
+    line-height: 1;
+    height: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.temp-max {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-top: 0.2rem;
+}
+
+.temp-min {
+    font-size: 0.75rem;
+    color: var(--color-text-gray);
+}
+
+/* --- Card 2: Gauge (Umidade) --- */
+.gauge-box {
+    background-color: #dce5c7;
+    border: 1px solid #c2d3a9;
+    border-radius: 4px;
+    padding: 1.5rem 1rem 0.5rem;
+    margin-top: auto;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gauge-container {
+    position: relative;
+    width: 180px;
+    height: 90px;
+    overflow: hidden;
+}
+
+.gauge-track, .gauge-fill {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 30px solid var(--color-gauge-track);
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    transform: rotate(-45deg);
+    box-sizing: border-box;
+}
+
+.gauge-fill {
+    border-color: var(--color-gauge-fill);
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    /* 62% da rotação total de 180 graus */
+    transform: rotate(calc(-45deg + (180deg * 0.62)));
+    transition: transform 1s ease-out;
+}
+
+.gauge-center-text {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.1;
+}
+
+.gauge-value {
+    font-family: var(--font-sans);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+}
+
+.gauge-label {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-primary-dark);
+}
+
+.gauge-limits {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin-top: 5px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-text-dark);
+}
+
+/* --- Card 3: Formulário Dicas --- */
+.tip-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: auto;
+}
+
+.tip-label {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-serif);
+    font-size: 0.95rem;
+}
+
+.tip-label i {
+    color: #8fb154; /* Ícone de lâmpada */
+}
+
+#tipInput {
+    background-color: var(--color-input-bg);
+    border: none;
+    border-radius: 4px;
+    padding: 1rem;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    color: var(--color-primary-dark);
+    resize: none;
+    height: 70px;
+    outline: none;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+#tipInput::placeholder {
+    color: rgba(15, 76, 58, 0.6);
+}
+
+.btn-submit {
+    background-color: #27621c; /* Verde escuro do botão */
+    color: var(--color-text-light);
+    border: none;
+    border-radius: 20px;
+    padding: 0.6rem;
+    font-size: 0.9rem;
+    font-family: var(--font-sans);
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    transition: background-color 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: #1e4a15;
+}
+
+.card-footer {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 1rem;
+    font-size: 0.75rem;
+    font-family: var(--font-serif);
+    color: var(--color-text-dark);
+    opacity: 0.8;
+}
+
+.card-footer i {
+    color: #6bb036;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN (MEDIA QUERIES)
+   ========================================= */
+@media (max-width: 1024px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 1.5rem;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-primary-dark);
+        padding: 1rem 0;
+        text-align: center;
+        z-index: 10;
+    }
+
+    .nav-links.active-menu {
+        display: flex;
+    }
+
+    .btn-entrar {
+        display: none; 
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .weather-grid {
+        gap: 0.5rem;
+    }
+}

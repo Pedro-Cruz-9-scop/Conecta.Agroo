@@ -1,0 +1,274 @@
+/* Definição de variáveis e resets globais */
+:root {
+    --green-dark: #163622;
+    --green-medium: #1f4e31;
+    --white: #ffffff;
+    --text-opacity: rgba(255, 255, 255, 0.85);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--white);
+    color: var(--white);
+    overflow-x: hidden;
+}
+
+/* Configuração da seção Hero com imagem */
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    min-height: 550px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.2) 100%);
+    z-index: 2;
+}
+
+/* Header com distribuição precisa das extremidades */
+.main-header {
+    position: relative;
+    width: 100%;
+    padding: 25px 0;
+    z-index: 10;
+}
+
+.header-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo no canto esquerdo */
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logo-text {
+    font-family: 'Merriweather', serif;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* Menu no canto direito */
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+}
+
+.nav-item {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--text-opacity);
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    color: var(--white);
+    font-weight: 500;
+}
+
+/* Botão entrar */
+.login-button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: var(--green-medium);
+    padding: 9px 22px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--white);
+    transition: background-color 0.25s ease;
+}
+
+.login-button:hover {
+    background-color: var(--green-dark);
+}
+
+.login-button .material-symbols-outlined {
+    font-size: 18px;
+}
+
+/* Menu responsivo */
+.mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+}
+
+/* Alinhamento do conteúdo de texto centralizado à esquerda */
+.hero-main {
+    position: relative;
+    z-index: 5;
+    max-width: 1280px;
+    width: 100%;
+    margin: auto auto;
+    padding: 0 40px;
+}
+
+.hero-text-wrapper {
+    max-width: 600px;
+    transform: translateY(-20px);
+}
+
+.hero-text-wrapper h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 42px;
+    line-height: 1.25;
+    margin-bottom: 12px;
+}
+
+.hero-text-wrapper p {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Barra de Recursos Flutuante (Transpõe o limite inferior) */
+.features-wrapper {
+    position: relative;
+    background-color: var(--white);
+    width: 100%;
+    z-index: 15;
+}
+
+.features-bar {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--green-dark);
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    padding: 35px 20px;
+    transform: translateY(-50%); /* Força a barra a subir metade da sua altura */
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.feature-block {
+    flex: 1;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.feature-block h3 {
+    font-family: 'Merriweather', serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.35;
+    margin-bottom: 10px;
+}
+
+.feature-block p {
+    font-size: 13.5px;
+    color: #c3dfcb;
+    line-height: 1.45;
+}
+
+.block-divider {
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Ajustes finos de responsividade */
+@media (max-width: 992px) {
+    .features-bar {
+        flex-direction: column;
+        gap: 25px;
+        transform: translateY(-80px);
+        margin: 0 20px;
+    }
+    .block-divider {
+        display: none;
+    }
+    .hero-container {
+        height: auto;
+        padding-bottom: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        display: none;
+        position: absolute;
+        top: 85px;
+        right: 20px;
+        background-color: var(--green-dark);
+        flex-direction: column;
+        padding: 25px;
+        border-radius: 8px;
+        width: 220px;
+        gap: 20px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+    
+    .nav-container.open {
+        display: flex;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .mobile-toggle {
+        display: block;
+    }
+
+    .hero-text-wrapper h1 {
+        font-size: 32px;
+    }
+
+    .hero-text-wrapper p {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConectaAgro - Recursos</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="/css/recursos.css">
+</head>
+<body>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        
+        <header class="navbar">
+           <div class="logo">
+                <img src="/img/logo.png" alt="Logo ConectaAgro" class="logo-img" style="max-height: 50px; width: auto;">
+            </div>
+            
+            <nav class="nav-links">
+               <ul class="nav-links">
+                    <li><a href="home.html">Início</a></li>
+                    <li><a href="recursos.html" class="active">Recursos</a></li>
+                    <li><a href="vendas.html">Vendas</a></li>
+                    <li><a href="praga.html" >Alerta</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+            
+            <a href="#" class="btn-entrar">
+                <i class="fa-solid fa-user"></i> Entrar
+            </a>
+
+            <button class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </header>
+
+        <div class="hero-content">
+            <h1>Recursos</h1>
+            <p>Recursos práticos para<br>ajudar sua produção</p>
+        </div>
+    </section>
+
+    <main class="main-container">
+        <div class="cards-grid">
+            
+            <article class="resource-card">
+                <div class="card-header">
+                    <i class="fa-solid fa-temperature-three-quarters card-icon"></i>
+                    <h2>Temperatura<br>da Semana</h2>
+                </div>
+                <p class="card-description">Previsão dos próximos dias para planejar suas atividades.</p>
+                
+                <div class="weather-grid">
+                    <div class="weather-day">
+                        <span class="day-name">DOM</span>
+                        <i class="fa-solid fa-sun weather-icon sunny"></i>
+                        <span class="condition">Ensolarado</span>
+                        <span class="temp-max">28°</span>
+                        <span class="temp-min">16°</span>
+                    </div>
+                    <div class="weather-day">
+                        <span class="day-name">SEG</span>
+                        <i class="fa-solid fa-sun weather-icon sunny"></i>
+                        <span class="condition">Ensolarado</span>
+                        <span class="temp-max">29°</span>
+                        <span class="temp-min">17°</span>
+                    </div>
+                    <div class="weather-day">
+                        <span class="day-name">TER</span>
+                        <i class="fa-solid fa-cloud-sun weather-icon partly-cloudy"></i>
+                        <span class="condition">Parcialmente<br>nublado</span>
+                        <span class="temp-max">27°</span>
+                        <span class="temp-min">16°</span>
+                    </div>
+                    <div class="weather-day">
+                        <span class="day-name">QUA</span>
+                        <i class="fa-solid fa-sun weather-icon sunny"></i>
+                        <span class="condition">Ensolarado</span>
+                        <span class="temp-max">26°</span>
+                        <span class="temp-min">15°</span>
+                    </div>
+                    <div class="weather-day">
+                        <span class="day-name">QUI</span>
+                        <i class="fa-solid fa-cloud weather-icon cloudy"></i>
+                        <span class="condition">Nublado</span>
+                        <span class="temp-max">24°</span>
+                        <span class="temp-min">14°</span>
+                    </div>
+                    <div class="weather-day">
+                        <span class="day-name">SEX</span>
+                        <i class="fa-solid fa-cloud-rain weather-icon rainy"></i>
+                        <span class="condition">Chuva fraca</span>
+                        <span class="temp-max">23°</span>
+                        <span class="temp-min">13°</span>
+                    </div>
+                    <div class="weather-day">
+                        <span class="day-name">SÁB</span>
+                        <i class="fa-solid fa-cloud-sun weather-icon partly-cloudy"></i>
+                        <span class="condition">Parcialmente<br>nublado</span>
+                        <span class="temp-max">25°</span>
+                        <span class="temp-min">15°</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="resource-card">
+                <div class="card-header">
+                    <i class="fa-solid fa-droplet card-icon"></i>
+                    <h2>Umidade<br>do Solo</h2>
+                </div>
+                <p class="card-description">Monitore a umidade do solo e mantenha suas plantas sempre bem cuidadas.</p>
+                
+                <div class="gauge-box">
+                    <div class="gauge-container">
+                        <div class="gauge-track"></div>
+                        <div class="gauge-fill"></div>
+                        <div class="gauge-center-text">
+                            <span class="gauge-value">62%</span>
+                            <span class="gauge-label">Ideal</span>
+                        </div>
+                    </div>
+                    <div class="gauge-limits">
+                        <span>0%</span>
+                        <span>100%</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="resource-card">
+                <div class="card-header">
+                    <i class="fa-solid fa-person-digging card-icon"></i>
+                    <h2>Dicas de<br>Plantio</h2>
+                </div>
+                <p class="card-description">Compartilhe suas orientações práticas para ajudar outras pessoas a melhorar o desenvolvimento da sua cultura.</p>
+                
+                <form class="tip-form" id="tipForm">
+                    <label for="tipInput" class="tip-label">
+                        <i class="fa-regular fa-lightbulb"></i> Envie sua dica:
+                    </label>
+                    <textarea id="tipInput" placeholder="Escreva sua dica de plantio aqui..."></textarea>
+                    
+                    <button type="submit" class="btn-submit">
+                        <i class="fa-regular fa-paper-plane"></i> Compartilhar dica
+                    </button>
+                </form>
+                
+                <div class="card-footer">
+                    <i class="fa-solid fa-seedling"></i> Sua experiência pode fazer a diferença!
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <script src="/js/recursos.js"></script>
+</body>
+</html>

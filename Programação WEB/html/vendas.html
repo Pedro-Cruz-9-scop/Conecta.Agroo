@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConectaAgro - Vendas</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="/css/vendas.css">
+</head>
+<body>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        
+        <header class="navbar">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-seedling"></i>
+                </div>
+                <span class="logo-text">ConectaAgro</span>
+            </div>
+            
+            <nav class="nav-links">
+                <ul class="nav-links">
+                    <li><a href="home.html">Início</a></li>
+                    <li><a href="recursos.html">Recursos</a></li>
+                    <li><a href="vendas.html" class="active">Vendas</a></li>
+                    <li><a href="praga.html" >Alerta</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+            
+            <a href="#" class="btn-entrar">
+                <i class="fa-solid fa-user"></i> Entrar
+            </a>
+
+            <button class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </header>
+
+        <div class="hero-content">
+            <h1>Vendas</h1>
+            <p>Encontre as melhores oportunidades<br>de comprar produtos bons e no melhor<br>preço</p>
+        </div>
+    </section>
+
+    <main class="main-container">
+        
+        <section class="filters">
+            <div class="filter-group">
+                <label for="cultura">
+                    <i class="fa-solid fa-leaf"></i> Cultura
+                </label>
+                <div class="select-wrapper">
+                    <select id="cultura" name="cultura">
+                        <option value="todas">Todas</option>
+                    </select>
+                    <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <label for="cidade">
+                    <i class="fa-solid fa-location-dot"></i> Cidade
+                </label>
+                <div class="select-wrapper">
+                    <select id="cidade" name="cidade">
+                        <option value="todas">Todas</option>
+                    </select>
+                    <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-list">
+            
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1596482598379-3fb768652d9a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Maracujá Maracujina">
+                </div>
+                <div class="product-info">
+                    <div class="info-title">
+                        <h2>Maracujá<br>Maracujina</h2>
+                    </div>
+                    <div class="info-column">
+                        <span class="info-label">Cidade</span>
+                        <span class="info-value">Jaguaquara/BA</span>
+                    </div>
+                    <div class="info-column">
+                        <span class="info-label">Data</span>
+                        <span class="info-value">17 de Jun.</span>
+                    </div>
+                    <div class="info-column">
+                        <span class="info-label">Valor</span>
+                        <span class="info-value price">R$6,50</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1615486511484-92e172cb4f55?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Cacau">
+                </div>
+                <div class="product-info">
+                    <div class="info-title">
+                        <h2>Cacau</h2>
+                    </div>
+                    <div class="info-column">
+                        <span class="info-label">Cidade</span>
+                        <span class="info-value">Mutuípe/BA</span>
+                    </div>
+                    <div class="info-column">
+                        <span class="info-label">Data</span>
+                        <span class="info-value">17 de Jun.</span>
+                    </div>
+                    <div class="info-column">
+                        <span class="info-label">Valor</span>
+                        <span class="info-value price">R$18,00</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1571501474200-c0f45e58fac4?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Banana">
+                </div>
+                <div class="product-info">
+                    <div class="info-title">
+                        <h2>Banana</h2>
+                    </div>
+                    <div class="info-column">
+                        <span class="info-label">Cidade</span>
+                        <span class="info-value">Laje/BA</span>
+                    </div>
+                    <div class="info-column">
+                        <span class="info-label">Data</span>
+                        <span class="info-value">17 de Jun.</span>
+                    </div>
+                    <div class="info-column">
+                        <span class="info-label">Valor</span>
+                        <span class="info-value price">R$4,20</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1536511132770-e5058c7e8c46?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Goiaba">
+                </div>
+                <div class="product-info">
+                    <div class="info-title">
+                        <h2>Goiaba</h2>
+                    </div>
+                    <div class="info-column">
+                        <span class="info-label">Cidade</span>
+                        <span class="info-value">Amargosa/BA</span>
+                    </div>
+                    <div class="info-column">
+                        <span class="info-label">Data</span>
+                        <span class="info-value">17 de Jun.</span>
+                    </div>
+                    <div class="info-column">
+                        <span class="info-label">Valor</span>
+                        <span class="info-value price">R$5,80</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1528825871115-3581a5387919?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Cajá">
+                </div>
+                <div class="product-info">
+                    <div class="info-title">
+                        <h2>Cajá</h2>
+                    </div>
+                    <div class="info-column">
+                        <span class="info-label">Cidade</span>
+                        <span class="info-value">Jiquiriçá/BA</span>
+                    </div>
+                    <div class="info-column">
+                        <span class="info-label">Data</span>
+                        <span class="info-value">17 de Jun.</span>
+                    </div>
+                    <div class="info-column">
+                        <span class="info-label">Valor</span>
+                        <span class="info-value price">R$9,50</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1639589255755-16fb8e154562?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Graviola">
+                </div>
+                <div class="product-info">
+                    <div class="info-title">
+                        <h2>Graviola</h2>
+                    </div>
+                    <div class="info-column">
+                        <span class="info-label">Cidade</span>
+                        <span class="info-value">Distrito<br>Serrana/BA</span>
+                    </div>
+                    <div class="info-column">
+                        <span class="info-label">Data</span>
+                        <span class="info-value">17 de Jun.</span>
+                    </div>
+                    <div class="info-column">
+                        <span class="info-label">Valor</span>
+                        <span class="info-value price">R$12,00</span>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <script src="/js/vendas.js"></script>
+</body>
+</html>

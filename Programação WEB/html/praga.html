@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConectaAgro - Alerta de Pragas</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="/css/praga.css">
+</head>
+<body>
+
+    <header class="hero">
+        <img src="" alt="Fundo de plantação com lagarta" class="hero-bg">
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="" alt="Ícone ConectaAgro" class="logo-icon">
+                    <span class="logo-text">ConectaAgro</span>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="home.html">Início</a></li>
+                    <li><a href="recursos.html">Recursos</a></li>
+                    <li><a href="vendas.html">Vendas</a></li>
+                    <li><a href="praga.html" class="active">Alerta</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+                
+                <button class="btn-login">
+                    <i class="fa-solid fa-user"></i> Entrar
+                </button>
+            </nav>
+
+            <div class="hero-content">
+                <h1 class="hero-title">Alerta de <span class="highlight-green">Pragas</span></h1>
+                <p class="hero-subtitle">
+                    Avisos sobre a ocorrência de pragas nas<br>
+                    lavouras para você agir no momento certo
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard">
+        <div class="dashboard-container">
+            
+            <section class="controls">
+                <div class="filters">
+                    <div class="filter-group">
+                        <label for="cultura"><i class="fa-solid fa-leaf filter-icon"></i> Cultura</label>
+                        <select id="cultura" name="cultura">
+                            <option value="todas">Todas</option>
+                            <option value="cacau">Cacau</option>
+                            <option value="banana">Banana</option>
+                            <option value="graviola">Graviola</option>
+                            <option value="caja">Cajá</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="cidade"><i class="fa-solid fa-location-dot filter-icon"></i> Cidade</label>
+                        <select id="cidade" name="cidade">
+                            <option value="todas">Todas</option>
+                            <option value="amargosa">Amargosa - Ba</option>
+                            <option value="ubaira">Ubaíra - Ba</option>
+                            <option value="cravolandia">Cravolândia - Ba</option>
+                            <option value="mutuipe">Mutuípe - Ba</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button class="btn-primary" id="btn-cadastrar">
+                    + Cadastrar alerta
+                </button>
+            </section>
+
+            <section class="data-card">
+                <div class="data-grid header">
+                    <div class="grid-item">
+                        <i class="fa-solid fa-bug grid-header-icon"></i> Praga
+                    </div>
+                    <div class="grid-item">
+                        <i class="fa-solid fa-location-dot grid-header-icon"></i> Cidade
+                    </div>
+                    <div class="grid-item">
+                        <i class="fa-solid fa-seedling grid-header-icon"></i> Cultura
+                    </div>
+                    <div class="grid-item">
+                        <i class="fa-regular fa-calendar-days grid-header-icon"></i> Data
+                    </div>
+                </div>
+
+                <div class="data-grid row">
+                    <div class="grid-item data-italic">
+                        <img src="" alt="Ícone Lagarta" class="custom-icon"> Lagarta-do-Cartucho
+                    </div>
+                    <div class="grid-item data-italic">
+                        <i class="fa-solid fa-location-dot text-green"></i> Amargosa - Ba
+                    </div>
+                    <div class="grid-item data-italic">
+                        <img src="" alt="Ícone Cacau" class="custom-icon"> Cacau
+                    </div>
+                    <div class="grid-item data-italic">
+                        <i class="fa-regular fa-calendar text-green"></i> 17/03/2025
+                    </div>
+                </div>
+
+                <div class="data-grid row">
+                    <div class="grid-item data-italic">
+                        <img src="" alt="Ícone Ferrugem" class="custom-icon"> Ferrugem asiática
+                    </div>
+                    <div class="grid-item data-italic">
+                        <i class="fa-solid fa-location-dot text-green"></i> Ubaíra - Ba
+                    </div>
+                    <div class="grid-item data-italic">
+                        <img src="" alt="Ícone Banana" class="custom-icon"> Banana
+                    </div>
+                    <div class="grid-item data-italic">
+                        <i class="fa-regular fa-calendar text-green"></i> 30/03/2025
+                    </div>
+                </div>
+
+                <div class="data-grid row">
+                    <div class="grid-item data-italic">
+                        <img src="" alt="Ícone Cigarrinha" class="custom-icon"> Cigarrinha-do-milho
+                    </div>
+                    <div class="grid-item data-italic">
+                        <i class="fa-solid fa-location-dot text-green"></i> Cravolândia - Ba
+                    </div>
+                    <div class="grid-item data-italic">
+                        <img src="" alt="Ícone Graviola" class="custom-icon"> Graviola
+                    </div>
+                    <div class="grid-item data-italic">
+                        <i class="fa-regular fa-calendar text-green"></i> 22/12/2024
+                    </div>
+                </div>
+
+                <div class="data-grid row">
+                    <div class="grid-item data-italic">
+                        <img src="" alt="Ícone Pulgão" class="custom-icon"> Pulgão
+                    </div>
+                    <div class="grid-item data-italic">
+                        <i class="fa-solid fa-location-dot text-green"></i> Mutuípe - Ba
+                    </div>
+                    <div class="grid-item data-italic">
+                        <img src="" alt="Ícone Cajá" class="custom-icon"> Cajá
+                    </div>
+                    <div class="grid-item data-italic">
+                        <i class="fa-regular fa-calendar text-green"></i> 14/07/2023
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="/js/praga.js"></script>
+</body>
+</html>

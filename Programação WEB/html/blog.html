@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConectaAgro - Blog</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="/css/blog.css">
+</head>
+<body>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        
+        <header class="navbar">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-seedling"></i>
+                </div>
+                <span class="logo-text">ConectaAgro</span>
+            </div>
+            
+           <nav class="nav-links">
+               <ul class="nav-links">
+                    <li><a href="home.html">Início</a></li>
+                    <li><a href="recursos.html">Recursos</a></li>
+                    <li><a href="vendas.html">Vendas</a></li>
+                    <li><a href="praga.html" >Alerta</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                </ul>
+            </nav>
+            
+            <a href="#" class="btn-entrar">
+                <i class="fa-solid fa-user"></i> Entrar
+            </a>
+
+            <button class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </header>
+
+        <div class="hero-content">
+            <h1>Blog</h1>
+            <p>Comente dicas agrícolas e anuncie serviços.</p>
+        </div>
+    </section>
+
+    <main class="main-container">
+        
+        <section class="tab-menu-container">
+            <div class="menu-intro">
+                <div class="intro-icon">
+                    <i class="fa-solid fa-user-astronaut" id="mainMenuIcon"></i>
+                </div>
+                <div class="intro-text">
+                    <h2 id="mainMenuTitle">Serviços</h2>
+                    <p id="mainMenuDesc">Compartilhe dicas de plantio e encontre serviços disponíveis na sua região.</p>
+                </div>
+            </div>
+            
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="dicas">
+                    <i class="fa-regular fa-lightbulb"></i> Dicas de Plantio
+                </button>
+                <button class="tab-btn" data-tab="servicos">
+                    <i class="fa-solid fa-briefcase"></i> Preciso de Serviços
+                </button>
+            </div>
+        </section>
+
+        <div class="sub-banner" id="subBanner">
+            <div class="sub-banner-icon">
+                <i class="fa-solid fa-seedling"></i>
+            </div>
+            <div class="sub-banner-text">
+                <h3>Dicas de Plantio</h3>
+                <p>Compartilhe suas experiências e ajude outros produtores.</p>
+            </div>
+        </div>
+
+        <div class="search-wrapper">
+            <div class="search-box">
+                <input type="text" placeholder="Pesquisar dica" id="searchInput">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            </div>
+        </div>
+
+        <section class="posts-grid" id="postsContainer">
+            </section>
+
+    </main>
+
+    <button class="fab-btn" title="Adicionar Publicação">
+        <i class="fa-solid fa-plus"></i>
+    </button>
+
+    <script src="/js/blog.js"></script>
+</body>
+</html>

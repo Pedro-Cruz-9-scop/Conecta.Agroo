@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - ConectaAgro</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    
+    <link rel="stylesheet" href="/css/cadastro.css">
+
+    <nav class="nav-links">
+               <ul class="nav-links">
+                    <li><a href="home.html">Início</a></li>
+                    <li><a href="recursos.html">Recursos</a></li>
+                    <li><a href="vendas.html">Vendas</a></li>
+                    <li><a href="praga.html" class="active">Alerta</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+</head>
+<body>
+
+    <div class="split-layout">
+        
+        <section class="left-panel">
+            <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=1200&auto=format&fit=cro" alt="Mãos cuidando de uma pequena muda na plantação" class="bg-img">
+            <div class="overlay"></div>
+            
+            <div class="branding-content">
+                <div class="logo-container">
+                    <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="46" fill="#116834" stroke="#ffffff" stroke-width="2"/>
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="#facc15" stroke-width="2" stroke-dasharray="5 3"/>
+                        <path d="M25 65 C35 50, 45 45, 50 55 C55 45, 65 50, 75 65" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+                        <path d="M20 70 Q50 40 80 70" fill="none" stroke="#facc15" stroke-width="5" stroke-linecap="round"/>
+                        <circle cx="50" cy="35" r="10" fill="#facc15"/>
+                        <path d="M35 75 Q50 60 65 75" fill="none" stroke="#ffffff" stroke-width="3"/>
+                    </svg>
+                    <span class="logo-text">ConectaAgro</span>
+                </div>
+                <h1 class="tagline">Conectando o agro,<br>gerando valor para<br>você e o Brasil!</h1>
+            </div>
+        </section>
+
+        <section class="right-panel">
+            <div class="form-container">
+                <div class="form-header">
+                    <h2>Cadastre sua conta!</h2>
+                    <p class="subtitle">Acesse ferramentas, alertas e oportunidades para o seu agro</p>
+                </div>
+
+                <form id="register-form" class="register-form">
+                    
+                    <div class="input-group">
+                        <label for="username">Nome de Usuário</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password">Senha</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="city">Selecione sua cidade</label>
+                        <div class="select-wrapper">
+                            <select id="city" name="city" required>
+                                <option value="" disabled selected></option>
+                                <option value="sp">São Paulo - SP</option>
+                                <option value="rj">Rio de Janeiro - RJ</option>
+                                <option value="mg">Belo Horizonte - MG</option>
+                                <option value="go">Goiânia - GO</option>
+                                <option value="mt">Cuiabá - MT</option>
+                            </select>
+                            <span class="material-symbols-outlined select-icon">expand_more</span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="input-group half-width">
+                            <label for="birthdate">Data de Nascimento</label>
+                            <input type="text" id="birthdate" name="birthdate" placeholder="DD/MM/AAAA" maxlength="10">
+                        </div>
+                        
+                        <div class="input-group half-width">
+                            <label>Adicione sua foto</label>
+                            <div class="file-upload-wrapper">
+                                <input type="file" id="photo" name="photo" accept="image/*">
+                                <label for="photo" class="file-btn" id="file-label">Arquivo</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="submit-container">
+                        <button type="submit" class="btn-submit">Criar conta</button>
+                    </div>
+
+                    <div class="login-prompt">
+                        <p>Já possui uma conta? <a href="#">Entrar</a></p>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="/js/cadastro.js"></script>
+</body>
+</html>
